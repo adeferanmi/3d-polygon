@@ -20,7 +20,7 @@ This project uses:
 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/3d-polygon.git
+git clone https://github.com/adeferanmi/3d-polygon.git
 
 ```
 
