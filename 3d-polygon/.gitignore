@@ -1,0 +1,26 @@
+# Visual Studio cache/settings
+.vs/
+*.user
+
+# Build folders
+x64/
+x86/
+Debug/
+Release/
+build/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Temporary/intermediate files
+*.obj
+*.pdb
+*.ilk
+*.log
+*.tlog
+
+# Optional OS junk
+.DS_Store
