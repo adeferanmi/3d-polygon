@@ -1,0 +1,46 @@
+# Build folders
+build/
+out/
+bin/
+x64/
+x86/
+Debug/
+Release/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+Makefile
+
+# Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Generated project files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Temporary files
+*.obj
+*.pdb
+*.ilk
+*.log
+*.tlog
+
+# macOS/Linux extras
+.DS_Store
+
+# Dependency managers (optional)
+vcpkg_installed/
+
+# GLFW/GLAD build outputs if generated
+libs/**/build/
