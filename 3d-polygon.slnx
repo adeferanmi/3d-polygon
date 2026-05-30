@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="3d-polygon/3d-polygon.vcxproj" />
+  <Project Path="3d-polygon/3d-polygon.vcxproj" Id="4180089b-4510-4115-9f1e-e5e34e392926" />
 </Solution>
