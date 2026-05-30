@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -71,12 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\include;$(IncludePath);C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\include</IncludePath>
+    <LibraryPath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\lib;$(LibraryPath);C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\include;$(IncludePath);C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\include</IncludePath>
+    <LibraryPath>C:\Users\HP\Desktop\PAU courses\200L\2\CSC 212\3d-polygon\3d-polygon\libraries\lib;$(LibraryPath);C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);;C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);;C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\Users\Darasimi Oguntoyinbo\Desktop\3d-polygon\3d-polygon\libraries\lib</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -105,6 +113,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -134,11 +143,24 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="VBO.cpp" />
+    <ClCompile Include="EBO.cpp" />
+    <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="VBO.h" />
+    <ClInclude Include="EBO.h" />
+    <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="Texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
